@@ -1,19 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View , TouchableOpacity, TextInput, Image} from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
-
+import Header from './src/components/Header';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
       {/* INICIO DA HEADER */}
-      <View style={styles.viewHeader}>
-        <Feather name="menu" size={24} color="#FF4FA3" />
-
-        <Text style={styles.textHeader}> TECFILMES </Text>
-        <TouchableOpacity></TouchableOpacity>
-      </View>
+     
+     <Header></Header>
 
       {/* INICIO DA BARRA DE PESQUISA */}
       <View style={styles.containerSearch}>
@@ -46,21 +42,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFF0F5',
     alignItems: 'center',
-  },
-
-  // HEADER
-  viewHeader:{
-    flexDirection: 'row',
-    width: "90%",
-    alignItems: 'center',
-    marginTop: 15,
-    justifyContent: 'space-between'
-  },
-
-  textHeader: {
-    fontSize: 25,
-    color: '#FF4FA3',
-    fontWeight: 'bold',
   },
 
   containerSearch: {
