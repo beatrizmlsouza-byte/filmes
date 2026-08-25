@@ -12,7 +12,7 @@ export default function Banner (){
     
 
     <Image 
-    source={require('../../../assets/cachorro.png')} 
+    source={require('../../../assets/diabo.jpg')} 
     style={styles.imageBanner}
   />
 

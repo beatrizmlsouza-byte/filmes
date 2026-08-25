@@ -4,8 +4,7 @@ import Feather from '@expo/vector-icons/Feather';
 import Header from './src/components/Header';
 import Search from './src/components/Search';
 import Banner from './src/components/Banner';
-import styles from './src/components/Search/styles';
-import { FlatList } from 'react-native-web';
+
 import movies from './movies'
 
 export default function App() {
@@ -26,9 +25,9 @@ export default function App() {
       keyExtractor={(item)=>item.id}
       renderItem={({item}) => (
 
-        <TouchableOpacity>
-          <Image style = {{width: 80 , height: 100}} source={{uri: item.imagem}}></Image>
-          <Text>{item.nome}</Text>
+        <TouchableOpacity style={styles.containerFilmes}>
+          <Image style = {styles.images} source={{uri: item.imagem}}></Image>
+          <Text style={styles.titulo}>{item.nome}</Text>
         </TouchableOpacity>
       
   )}
@@ -50,4 +49,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
+  
+  containerFilmes:{
+    paddingTop:20,
+    paddingBottom:16,
+    paddingRight:16,
+    width:140,
+    heigh:28
+},
+
+titulo:{
+    color:'#black',
+    fontSize:12,
+    paddingTop:8  
+},
+
+textNota:{
+    fontSize:10,
+    color:'#black',
+    paddingLeft:4
+},
+
+images:{
+    width:'100%',
+    height:170,
+    borderRadius: 8,    
+   
+}
 });
