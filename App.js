@@ -5,11 +5,11 @@ import Search from './src/components/Search'
 import Banner from './src/components/Banner'
 import CardMovies from './src/components/CardMovies'
 import movies from './movies'
+import Rotas from './src/components/rotas';
 
-
-export default function App() {
-  return (
-    <View style={styles.container}>
+export default function App(){
+  return(
+        <View style={styles.container}>
 
       {/*INICIO DA HEADER*/}
       <Header></Header>
@@ -48,6 +48,12 @@ export default function App() {
 
   );
 }
+
+//export default function App() {
+  //return (
+    //<Rotas></Rotas>
+  //);
+//}
 
 const styles = StyleSheet.create({
 
