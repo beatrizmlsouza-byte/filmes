@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Detalhes from "../telas/detalhes";
+import Home from "../Home";
 
 export default function Rotas () {
 
@@ -10,10 +11,10 @@ export default function Rotas () {
         <NavigationContainer>
 
             <Stack.Navigator>
-
+                
+                <Stack.Screen component={Home} name ="Home"/>
                 <Stack.Screen component={Detalhes} name='Detalhes'/>
                 
-
             </Stack.Navigator>
 
         </NavigationContainer>
